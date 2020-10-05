@@ -1,14 +1,14 @@
 <?php
-require_once '../traits/Matricola.php'
+require_once __DIR__ . '/../traits/Matricola.php';
 
 class Dipendente {
-    use getMatricola;
+    use Matricola;
 
     protected $nome;
     protected $cognome;
     protected $cod_fisc;
     protected $indirizzo;
-    protected $matricola = getMatricola;
+    protected $matricola = getMatricola();
 
 
     public function __construct($_nome, $_cognome) {
