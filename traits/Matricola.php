@@ -4,7 +4,7 @@ trait Matricola {
 
     public function getMatricola() {
         $this->matricola = rand(0001, 9999);
-        echo $this->matricola;
+        return $this->matricola;
     }
 }
 

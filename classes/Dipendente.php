@@ -8,7 +8,7 @@ class Dipendente {
     protected $cognome;
     protected $cod_fisc;
     protected $indirizzo;
-    protected $matricola = getMatricola();
+    protected $num_matricola;
 
 
     public function __construct($_nome, $_cognome) {
@@ -21,6 +21,8 @@ class Dipendente {
             die('Il cognome non è stato indicato');
         }
         $this->cognome = $_cognome;
+
+        $this->num_matricola = $this->getMatricola();
     }
 }
 
