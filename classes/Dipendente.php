@@ -13,20 +13,15 @@ class Dipendente {
 
     public function __construct($_nome, $_cognome) {
         if (empty($_nome)) {
-            die('Il nome non è stato indicato');
+            throw new Exception('deve essere inserito un nome');
         }
         $this->nome = $_nome;
 
         if (empty($_cognome)) {
-            die('Il cognome non è stato indicato');
+            throw new Exception('deve essere inserito un cognome');
         }
         $this->cognome = $_cognome;
 
         $this->num_matricola = $this->getMatricola();
     }
 }
-
-
-
-
-?>
